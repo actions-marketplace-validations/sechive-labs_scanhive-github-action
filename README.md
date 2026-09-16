@@ -42,7 +42,7 @@ jobs:
 
       - name: Upload SARIF to ScanHive
         id: scanhive
-        uses: YOUR_GITHUB_ORG/scanhive-github-action@v1
+        uses: sechive-labs/scanhive-github-action@1.0.0
         with:
           server-url: "http://127.0.0.1:8000"
           api-key: ${{ secrets.SCANHIVE_API_KEY }}
@@ -56,18 +56,4 @@ jobs:
 
 Use `127.0.0.1` only when the self-hosted runner and ScanHive backend run on the same machine. Otherwise use a reachable DNS name or LAN address.
 
-## Development
 
-```bash
-npm install
-npm run all
-```
-
-Commit the generated `dist/` directory. GitHub executes `dist/index.js` directly and does not install dependencies for JavaScript actions.
-
-## Release
-
-1. Commit source, metadata, and `dist/`.
-2. Create a release commit.
-3. Tag the immutable release, for example `v1.0.0`.
-4. Move the major tag `v1` to the same commit for consumer convenience.
