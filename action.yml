@@ -1,0 +1,31 @@
+name: "ScanHive"
+description: "Upload a SARIF security report to a ScanHive project."
+author: "ScanHive"
+branding:
+  icon: "shield"
+  color: "blue"
+inputs:
+  server-url:
+    description: "Base URL of the ScanHive server, including the port when required."
+    required: true
+  api-key:
+    description: "ScanHive API key. Pass this from a GitHub Actions secret."
+    required: true
+  project:
+    description: "Name or UUID of the destination ScanHive project."
+    required: true
+  scan-type:
+    description: "One of SAST, SCA, Secrets, Container Security, IaC, or DAST."
+    required: true
+    default: "SAST"
+  sarif-file:
+    description: "Path to the SARIF report file."
+    required: true
+outputs:
+  scan-id:
+    description: "UUID of the scan created in ScanHive."
+  findings:
+    description: "Number of findings imported by ScanHive."
+runs:
+  using: "node20"
+  main: "dist/index.js"

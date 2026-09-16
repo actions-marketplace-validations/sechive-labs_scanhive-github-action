@@ -1,0 +1,26 @@
+{
+  "name": "scanhive-github-action",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GitHub Action for uploading SARIF security results to ScanHive.",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "npm run check && ncc build src/index.ts -o dist --minify --source-map",
+    "test": "npm run build && node --test test/*.test.cjs",
+    "all": "npm run test"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@vercel/ncc": "^0.38.3",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "undici": "^6.27.0"
+  }
+}
