@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0b14"/>
+      <stop offset="100%" stop-color="#151020"/>
+    </linearGradient>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGrad)"/>
+
+  <!-- Single bold hex -->
+  <polygon points="32,10 50,21 50,43 32,54 14,43 14,21" fill="#1a1425" stroke="url(#hexGrad)" stroke-width="4"/>
+
+  <!-- Terminal cursor mark -->
+  <rect x="24" y="27" width="6" height="11" fill="#a78bfa"/>
+  <rect x="32" y="35" width="9" height="3" fill="#c4b5fd"/>
+</svg>

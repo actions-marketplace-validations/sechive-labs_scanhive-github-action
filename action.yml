@@ -2,8 +2,8 @@ name: "ScanHive"
 description: "Upload a SARIF security report to a ScanHive project."
 author: "ScanHive"
 branding:
-  icon: "shield"
-  color: "blue"
+  icon: "hexagon"
+  color: "purple"
 inputs:
   server-url:
     description: "Base URL of the ScanHive server, including the port when required."

@@ -34,7 +34,7 @@ export function validateScanType(value: string): string {
   return value;
 }
 
-async function run(): Promise<void> {
+export async function run(): Promise<void> {
   try {
     const serverUrl = normalizeServerUrl(core.getInput("server-url", { required: true }));
     const apiKey = core.getInput("api-key", { required: true });
