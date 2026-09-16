@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "GitHub Action for uploading SARIF security results to ScanHive.",
+  "license": "Apache-2.0",
   "scripts": {
     "check": "tsc --noEmit",
     "build": "npm run check && ncc build src/index.ts -o dist --minify --source-map",
